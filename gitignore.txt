@@ -1,0 +1,8 @@
+.deployment_test_env/
+.ipynb_checkpoints/
+backups/
+__pycache__/
+*.pyc
+.env
+*.log
+app_backup_before_live_integration_20261104_175344.py

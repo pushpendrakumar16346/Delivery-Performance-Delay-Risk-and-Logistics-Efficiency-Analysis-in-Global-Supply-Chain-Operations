@@ -1,0 +1,5 @@
+Efficiency Rank,Shipping Mode,Shipping Mode Efficiency Index,SLA Compliance Percentage,Late Delivery Risk Ratio,Average Delay Gap,Delay Gap Efficiency Score,Efficiency Category
+1,Standard Class,68.18473529611354,60.23091912014193,39.76908087985807,-0.006301319399338846,100.0,Moderate Efficiency
+2,Same Day,56.800001785731794,52.07145163025933,47.92854836974067,0.47928548369740664,75.71420240762166,Low Efficiency
+3,Second Class,16.13678045317399,20.17097556646749,79.82902443353251,1.9931668934508666,0.0,Low Efficiency
+4,First Class,9.934310403816077,0.0,100.0,1.0,49.67155201908038,Low Efficiency

@@ -1,0 +1,5 @@
+Shipping Mode,Total Shipments,Eligible Shipments,SLA Compliant Shipments,SLA Compliance Percentage,Delayed Shipments,Delayed Percentage,On-time Percentage,Early Delivery Percentage,SLA Status
+First Class,27814,26513,0,0.0,26513,100.0,0.0,0.0,Low SLA Compliance
+Same Day,9737,9293,4839,52.07145163025933,4454,47.92854836974067,52.07145163025933,0.0,Low SLA Compliance
+Second Class,35216,33806,6819,20.17097556646749,26987,79.82902443353251,20.17097556646749,0.0,Low SLA Compliance
+Standard Class,107752,103153,62130,60.23091912014193,41023,39.76908087985807,19.910230434403264,40.32068868573866,Low SLA Compliance

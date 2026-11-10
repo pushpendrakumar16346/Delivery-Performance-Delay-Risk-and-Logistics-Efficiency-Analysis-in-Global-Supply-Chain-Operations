@@ -1,0 +1,15 @@
+Baseline Metric,Value,Unit
+Total Shipment Records,180519.0,Records
+Eligible Shipment Records,172765.0,Records
+Delayed Shipments,98977.0,Records
+On-time Shipments,32196.0,Records
+Early Shipments,41592.0,Records
+Cancelled Shipments,7754.0,Records
+Ineligible Shipments,0.0,Records
+On-time Delivery Rate,18.63571904031488,%
+Delayed Delivery Rate,57.28996035076549,%
+Early Delivery Rate,24.07432060891963,%
+Average Delay Among Delayed Shipments,1.6181840225506936,Days
+Median Delay Among Delayed Shipments,1.0,Days
+Late Delivery Risk Ratio,0.5728996035076549,Ratio
+Risk Mismatch Percentage,0.0,%

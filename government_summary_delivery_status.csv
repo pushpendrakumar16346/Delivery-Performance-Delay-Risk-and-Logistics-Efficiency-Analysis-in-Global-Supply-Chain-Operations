@@ -1,0 +1,5 @@
+Delivery Classification,Records,Percentage
+Delayed,98977,57.28996035076549
+Exactly On-Time,32196,18.63571904031488
+Early,41592,24.07432060891963
+SLA Compliant (On-Time or Early),73788,42.71003964923451

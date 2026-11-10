@@ -1,0 +1,15 @@
+KPI,Value,Unit
+Total Shipment Records,180519.0,Records
+Eligible Shipment Records,172765.0,Records
+On-Time Delivery Percentage,18.63571904031488,%
+Delayed Delivery Percentage,57.28996035076549,%
+Early Delivery Percentage,24.07432060891963,%
+Average Delivery Delay,1.6181840225506936,Days
+Median Delivery Delay,1.0,Days
+Maximum Delivery Delay,4.0,Days
+Minimum Delivery Gap,-2.0,Days
+Late Delivery Risk Ratio,0.5728996035076549,Ratio
+Late Delivery Risk Percentage,57.28996035076549,%
+Risk Mismatch Count,0.0,Records
+Risk Mismatch Percentage,0.0,%
+Cancelled Shipment Percentage,4.295392728743234,%

@@ -1,0 +1,2 @@
+Customer Segment,Shipment Count,Delayed Count,On-time Count,Early Count,Delayed Percentage,On-time Delivery Percentage,Early Delivery Percentage,Average Delay Gap (Days),Median Delay Gap (Days),Average Delay Among Delayed Shipments (Days),Late Delivery Risk Ratio (%),Valid Late Risk Records,SLA Compliance (%),High Risk Segment,Risk Assessment Threshold (%)
+Home Office,30817,17747,5722,7348,57.588344095791285,18.56767368660155,23.843982217607167,0.5788363565564462,1.0,1.625683214064349,57.588344095791285,30817,42.411655904208715,True,57.44995375221235

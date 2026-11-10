@@ -1,0 +1,5 @@
+Delivery Classification,Shipment Count,Percentage
+Delayed,98977,57.28996035076549
+Exactly On-time,32196,18.63571904031488
+Early,41592,24.07432060891963
+SLA-compliant,73788,42.71003964923451

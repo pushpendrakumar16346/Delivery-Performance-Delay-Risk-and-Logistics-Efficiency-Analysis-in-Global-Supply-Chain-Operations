@@ -1,0 +1,17 @@
+Performance Indicator,Result
+Total Shipment Records,180519.0
+Eligible Shipments,172765.0
+Delayed Shipments,98977.0
+On-time Shipments,32196.0
+Early Shipments,41592.0
+Cancelled Shipments,7754.0
+Ineligible Shipments,0.0
+On-time Delivery Rate,18.64
+Delayed Delivery Rate,57.29
+Early Delivery Rate,24.07
+Average Delivery Delay,1.62
+Median Delivery Delay,1.0
+Maximum Delivery Delay,4.0
+Minimum Delivery Gap,-2.0
+Late Delivery Risk Ratio,0.5729
+Risk Mismatch Count,0.0

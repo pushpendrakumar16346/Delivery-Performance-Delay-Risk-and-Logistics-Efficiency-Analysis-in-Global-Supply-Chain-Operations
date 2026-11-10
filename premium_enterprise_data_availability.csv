@@ -1,0 +1,2 @@
+Assessment,Dedicated Premium or Enterprise Field Available,Available Related Fields,Available Customer Segment Categories,Corporate Automatically Classified as Premium,Corporate Automatically Classified as Enterprise,Analytical Limitation
+Premium/Enterprise Customer Identification,No,None identified,"Consumer, Corporate, Home Office",No,No,The dataset does not contain a dedicated premium or enterprise customer classification field. Corporate is retained as its own observed customer segment.

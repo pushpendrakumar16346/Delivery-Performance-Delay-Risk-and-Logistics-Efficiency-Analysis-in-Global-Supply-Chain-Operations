@@ -1,0 +1,6 @@
+KPI,Value,Formula
+On-Time Delivery Rate (%),42.71,SLA-compliant eligible deliveries / eligible deliveries × 100
+Average Delivery Delay (Days),1.62,Mean positive delivery gap among delayed eligible deliveries
+Late Delivery Risk Ratio (%),57.29,Mean valid binary late-delivery risk label × 100
+Shipping Mode Efficiency Index,37.78,"Average of mode-level indices using 50% SLA, 30% inverse risk and 20% relative delay score"
+Regional Delay Index,100.0,Regional average positive delay / maximum regional average positive delay × 100

@@ -1,0 +1,10 @@
+KPI or Metric,Value
+Eligible Shipments,172765.0
+Delayed Shipments,98977.0
+Exactly On-time Shipments,32196.0
+Early Shipments,41592.0
+SLA-Compliant Shipments,73788.0
+On-Time Delivery Rate KPI (%),42.71
+Exact On-time Percentage (%),18.64
+Average Delivery Delay (Days),1.62
+Late Delivery Risk Ratio (%),57.28996035076549
