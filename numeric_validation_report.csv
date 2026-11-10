@@ -1,0 +1,22 @@
+Column,Original Data Type,Final Data Type,Conversion Failures,Missing Values After Conversion
+Days for shipping (real),int64,int64,0,0
+Days for shipment (scheduled),int64,int64,0,0
+Benefit per order,float64,float64,0,0
+Sales per customer,float64,float64,0,0
+Late_delivery_risk,int64,int64,0,0
+Category Id,int64,int64,0,0
+Customer Id,int64,int64,0,0
+Customer Zipcode,float64,float64,0,3
+Department Id,int64,int64,0,0
+Latitude,float64,float64,0,0
+Longitude,float64,float64,0,0
+Order Customer Id,int64,int64,0,0
+Order Item Discount,float64,float64,0,0
+Order Item Discount Rate,float64,float64,0,0
+Order Item Product Price,float64,float64,0,0
+Order Item Profit Ratio,float64,float64,0,0
+Order Item Quantity,int64,int64,0,0
+Sales,float64,float64,0,0
+Order Item Total,float64,float64,0,0
+Order Profit Per Order,float64,float64,0,0
+Product Price,float64,float64,0,0

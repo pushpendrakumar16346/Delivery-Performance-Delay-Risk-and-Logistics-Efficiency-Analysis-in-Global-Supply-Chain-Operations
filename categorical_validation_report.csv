@@ -1,0 +1,10 @@
+Column,Unique Values After Standardization,Missing Values,Blank Values Converted to Missing
+Delivery Status,4,0,0
+Shipping Mode,4,0,0
+Customer Segment,3,0,0
+Market,5,0,0
+Order Region,23,0,0
+Order Country,164,0,0
+Order State,1089,0,0
+Category Name,50,0,0
+Department Name,11,0,0

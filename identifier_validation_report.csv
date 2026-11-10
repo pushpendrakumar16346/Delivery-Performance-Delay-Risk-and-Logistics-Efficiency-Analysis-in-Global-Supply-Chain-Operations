@@ -1,0 +1,4 @@
+Identifier,Missing Values,Unique Values,Repeated Records,Unique Identifier Check
+Customer Id,0,20652.0,159867.0,REPEATED CUSTOMER IDENTIFIERS
+Order Customer Id,0,20652.0,159867.0,REPEATED CUSTOMER IDENTIFIERS
+Customer Id vs Order Customer Id,0,,,0 mismatches

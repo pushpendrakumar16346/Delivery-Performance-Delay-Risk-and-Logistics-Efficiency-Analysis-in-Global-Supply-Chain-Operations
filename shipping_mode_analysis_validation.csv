@@ -1,0 +1,35 @@
+Validation Check,Status,Details
+Input dataset loaded,PASS,"Loaded 180,519 records."
+All shipping modes identified,PASS,4 shipping modes identified.
+Shipment counts reconcile,PASS,Shipping mode shipment totals reconcile.
+Eligible shipment counts reconcile,PASS,Eligible shipment counts reconcile.
+Delivery classifications reconcile,PASS,All eligible shipments are classified.
+Percentage denominator: First Class,PASS,All delivery percentages use eligible shipments.
+SLA reconciliation: First Class,PASS,SLA compliance uses eligible shipments.
+Percentage denominator: Same Day,PASS,All delivery percentages use eligible shipments.
+SLA reconciliation: Same Day,PASS,SLA compliance uses eligible shipments.
+Percentage denominator: Second Class,PASS,All delivery percentages use eligible shipments.
+SLA reconciliation: Second Class,PASS,SLA compliance uses eligible shipments.
+Percentage denominator: Standard Class,PASS,All delivery percentages use eligible shipments.
+SLA reconciliation: Standard Class,PASS,SLA compliance uses eligible shipments.
+Cancelled shipments excluded from eligible metrics,PASS,Cancelled shipments are excluded from delivery-performance denominators.
+Efficiency index within valid range,PASS,Efficiency scores are within 0 and 100.
+Efficiency ranking complete,PASS,All shipping modes have an efficiency ranking.
+Expected shipping modes available,PASS,All four expected shipping modes are available.
+Output file exists: shipping_mode_comparison.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_comparison.csv
+Output file exists: shipping_mode_sla_report.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_sla_report.csv
+Output file exists: shipping_mode_efficiency_ranking.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_efficiency_ranking.csv
+Output file exists: shipping_mode_delivery_status_counts.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_delivery_status_counts.csv
+Output file exists: shipping_mode_delivery_status_percentages.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_delivery_status_percentages.csv
+Output file exists: shipping_mode_delay_gap_summary.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\shipping_mode_delay_gap_summary.csv
+Output file exists: shipping_mode_efficiency_report.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\shipping_mode_efficiency_report.csv
+Output file exists: shipping_mode_individual_comparison.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\shipping_mode_individual_comparison.csv
+Output file exists: shipping_mode_eligible_delivery_records.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\shipping_mode_eligible_delivery_records.csv
+Chart exists: shipping_mode_delayed_percentage.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_delayed_percentage.png
+Chart exists: shipping_mode_on_time_percentage.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_on_time_percentage.png
+Chart exists: shipping_mode_sla_compliance.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_sla_compliance.png
+Chart exists: shipping_mode_average_delay_gap.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_average_delay_gap.png
+Chart exists: shipping_mode_late_delivery_risk.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_late_delivery_risk.png
+Chart exists: shipping_mode_efficiency_index.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_efficiency_index.png
+Chart exists: shipping_mode_delivery_status_comparison.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\shipping_mode_delivery_status_comparison.png
+Output file exists: shipping_mode_analysis_validation.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\shipping_mode_analysis_validation.csv

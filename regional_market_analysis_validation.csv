@@ -1,0 +1,51 @@
+Validation Check,Status,Details
+Input dataset loaded,PASS,"Loaded 180,519 records."
+Eligible delivery records identified,PASS,"Eligible records: 172,765."
+Regional categories identified,PASS,Regions identified: 23.
+Country categories identified,PASS,Countries identified: 164.
+Market categories identified,PASS,Markets identified: 5.
+Regional shipment counts reconcile,PASS,Regional totals reconcile with eligible records having a region.
+Country shipment counts reconcile,PASS,Country totals reconcile with eligible records having a country.
+Market shipment counts reconcile,PASS,Market totals reconcile with eligible records having a market.
+Regional delay classifications reconcile,PASS,"Regional delayed, on-time and early counts reconcile."
+Country delay classifications reconcile,PASS,"Country delayed, on-time and early counts reconcile."
+Market delay classifications reconcile,PASS,"Market delayed, on-time and early counts reconcile."
+Regional percentages use consistent eligible denominators,PASS,Regional percentages use eligible shipments within each region.
+Country percentages use consistent eligible denominators,PASS,Country percentages use eligible shipments within each country.
+Market percentages use consistent eligible denominators,PASS,Market percentages use eligible shipments within each market.
+Regional risk ratios reconcile,PASS,Regional risk ratios use valid binary risk records.
+Country risk ratios reconcile,PASS,Country risk ratios use valid binary risk records.
+Market risk ratios reconcile,PASS,Market risk ratios use valid binary risk records.
+High-risk regions identified,PASS,High-risk regions are selected from identified regions.
+High-risk countries identified,PASS,High-risk countries are selected from identified countries.
+Regional ranking complete,PASS,All identified regions have a delay intensity rank.
+Country ranking complete,PASS,All identified countries have a delay rank.
+Market ranking complete,PASS,All identified markets have an efficiency rank.
+Market efficiency index within valid range,PASS,Market efficiency scores are within 0 and 100.
+Cancelled shipments excluded from delivery metrics,PASS,Cancelled shipments are excluded from all eligible denominators.
+Geographic mapping data prepared,PASS,Regional and country mapping summaries are prepared.
+Geographic coordinate limitation documented,PASS,"Mapping data contains geographic categories and metrics, not invented coordinates."
+Output file exists: regional_delivery_performance.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\regional_delivery_performance.csv
+Output file exists: regional_delay_intensity_ranking.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\regional_delay_intensity_ranking.csv
+Output file exists: high_risk_regions.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\high_risk_regions.csv
+Output file exists: country_delivery_performance.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\country_delivery_performance.csv
+Output file exists: country_delay_ranking.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\country_delay_ranking.csv
+Output file exists: high_risk_countries.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\high_risk_countries.csv
+Output file exists: market_delivery_performance.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\market_delivery_performance.csv
+Output file exists: market_logistics_efficiency_ranking.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\market_logistics_efficiency_ranking.csv
+Output file exists: regional_geographic_mapping_data.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\regional_geographic_mapping_data.csv
+Output file exists: country_geographic_mapping_data.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\country_geographic_mapping_data.csv
+Output file exists: regional_heatmap_data.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\regional_heatmap_data.csv
+Output file exists: country_heatmap_data.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\tables\country_heatmap_data.csv
+Output file exists: regional_diagnostics_report.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\regional_diagnostics_report.csv
+Output file exists: country_diagnostics_report.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\country_diagnostics_report.csv
+Output file exists: market_diagnostics_report.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\market_diagnostics_report.csv
+Chart exists: regional_delivery_performance_heatmap.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\regional_delivery_performance_heatmap.png
+Chart exists: country_delivery_performance_heatmap.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\country_delivery_performance_heatmap.png
+Chart exists: high_risk_regional_comparison.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\high_risk_regional_comparison.png
+Chart exists: high_risk_country_comparison.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\high_risk_country_comparison.png
+Chart exists: market_wise_delay_percentage.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\market_wise_delay_percentage.png
+Chart exists: market_wise_late_delivery_risk.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\market_wise_late_delivery_risk.png
+Chart exists: market_wise_sla_compliance.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\market_wise_sla_compliance.png
+Chart exists: market_logistics_efficiency_index.png,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\figures\market_logistics_efficiency_index.png
+Output file exists: regional_market_analysis_validation.csv,PASS,Verified: C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\reports\regional_market_analysis_validation.csv

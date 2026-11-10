@@ -1,0 +1,28 @@
+{
+    "analysis_name": "Customer Segment Performance and SLA Exposure Analysis",
+    "source_file": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\delivery_gap_analysis.csv",
+    "analysis_timestamp": "2026-11-09T01:19:46",
+    "source_records": 180519,
+    "eligible_segment_records": 172765,
+    "cancelled_records_excluded": 7754,
+    "invalid_duration_records": 0,
+    "missing_segment_records": 0,
+    "identified_customer_segments": [
+        "Consumer",
+        "Corporate",
+        "Home Office"
+    ],
+    "operational_sla_proxy": "Actual shipping duration <= Scheduled shipping duration",
+    "high_risk_threshold_method": "75th percentile of segment-level delayed percentages",
+    "high_risk_threshold_percentage": 57.44995375221235,
+    "high_risk_segments": [
+        "Home Office"
+    ],
+    "corporate_eligible_shipments": 52528,
+    "corporate_delayed_shipments": 29982,
+    "total_sales_exposure": 35214428.98,
+    "total_profit_exposure": 3806420.6300000004,
+    "premium_enterprise_field_available": false,
+    "corporate_classified_as_premium_or_enterprise": false,
+    "analytical_limitation": "No dedicated premium or enterprise customer field exists. Corporate is analyzed only as an observed customer segment."
+}

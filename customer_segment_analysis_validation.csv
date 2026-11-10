@@ -1,0 +1,21 @@
+Validation Check,Status,Details
+Input dataset loaded successfully,PASS,"Records: 180,519"
+Required analytical columns available,PASS,All required columns found
+Customer segments identified,PASS,Segments: 3
+Eligible records contain valid durations,PASS,"Eligible records: 172,765"
+Eligible records exclude cancelled shipments,PASS,No cancelled shipments included
+Eligible records have customer segment values,PASS,No missing segment values in eligible records
+Delivery gap formula verified,PASS,Actual duration minus scheduled duration
+Delivery classification reconciles,PASS,Delayed + On-time + Early equals eligible records
+Segment shipment counts reconcile,PASS,"Segment counts: 172,765"
+Delayed percentages within valid range,PASS,All segment delayed percentages are between 0 and 100
+On-time percentages within valid range,PASS,All segment on-time percentages are between 0 and 100
+SLA compliance within valid range,PASS,SLA compliance percentages are between 0 and 100
+SLA compliant and breach counts reconcile,PASS,SLA compliant + breach counts equal eligible records
+Late delivery risk uses valid binary records,PASS,Risk calculations use only valid binary labels
+Corporate analysis uses only Corporate records,PASS,"Corporate eligible records: 52,528"
+Corporate not automatically classified as premium,PASS,No unsupported premium classification
+Corporate not automatically classified as enterprise,PASS,No unsupported enterprise classification
+Sales exposure reconciles,PASS,Segment sales totals reconcile to eligible sales records
+Profit exposure reconciles,PASS,Segment profit totals reconcile to eligible profit records
+All expected output files generated,PASS,Verified files: 21/21

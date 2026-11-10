@@ -1,0 +1,11 @@
+Validation Check,Actual Value,Expected Value,Status
+Source record count preserved,180519,180519,PASS
+Delivery gap formula validation,Correct,Correct,PASS
+Eligible classification totals reconcile,172765,172765,PASS
+Cancelled records correctly separated,7754,7754,PASS
+Invalid-duration records correctly separated,0,0,PASS
+All classification totals reconcile,180519,180519,PASS
+No eligible record left unclassified,0,0,PASS
+No cancelled shipment classified incorrectly,0,0,PASS
+No invalid-duration record classified incorrectly,0,0,PASS
+No eligible delivery gap missing,0,0,PASS

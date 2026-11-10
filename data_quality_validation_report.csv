@@ -1,0 +1,17 @@
+Validation,Status,Details
+Required source columns available,PASS,Missing columns: []
+No exact duplicate records in cleaned data,PASS,Duplicate count: 0
+Actual shipping duration is numeric,PASS,int64
+Scheduled shipping duration is numeric,PASS,int64
+No negative actual shipping durations,PASS,Minimum: 0
+No negative scheduled shipping durations,PASS,Minimum: 0
+Late delivery risk contains only valid values,PASS,"Values: [0, 1]"
+Delivery status values are standardized,PASS,"Values: ['Advance shipping', 'Late delivery', 'Shipping canceled', 'Shipping on time']"
+Shipping mode values are standardized,PASS,"Values: ['First Class', 'Same Day', 'Second Class', 'Standard Class']"
+Customer segment values are standardized,PASS,"Values: ['Consumer', 'Corporate', 'Home Office']"
+Market values are standardized,PASS,"Values: ['Africa', 'Europe', 'LATAM', 'Pacific Asia', 'USCA']"
+Geographic coordinates are within valid ranges,PASS,Invalid coordinate records retained for review: 0
+Order quantity is positive and integral,PASS,Quantity must be a positive whole number
+No personal identifier columns in analytical dataset,PASS,"Removed columns: ['Customer Fname', 'Customer Lname', 'Customer Id', 'Order Customer Id', 'Customer Street', 'Customer Zipcode', 'Customer City', 'Customer State', 'Customer Country']"
+No missing essential delivery fields,PASS,Essential delivery fields checked
+Record counts reconciled,PASS,Original: 180519; Duplicates removed: 0; Critical exclusions: 0; Final: 180519; Expected final: 180519

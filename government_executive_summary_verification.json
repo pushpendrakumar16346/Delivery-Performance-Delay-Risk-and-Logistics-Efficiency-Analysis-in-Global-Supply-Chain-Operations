@@ -1,0 +1,40 @@
+{
+    "project": "Analysis in Global Supply Chain Operations",
+    "verification_timestamp": "2026-11-09T01:24:59.238941",
+    "docx_path": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\government_executive_summary\\Government_Executive_Summary.docx",
+    "pdf_path": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\government_executive_summary\\Government_Executive_Summary.pdf",
+    "docx_size_bytes": 43025,
+    "pdf_size_bytes": 13811,
+    "pdf_page_count": 4,
+    "docx_paragraph_count": 71,
+    "docx_table_count": 7,
+    "pdf_extracted_text_characters": 10979,
+    "required_sections": [
+        "Executive Overview",
+        "Supply Chain Problem",
+        "Dataset Overview",
+        "Delivery Performance Findings",
+        "Delay Risk Findings",
+        "Shipping Mode Findings",
+        "Regional and Market Findings",
+        "Customer Segment Impact",
+        "Key Performance Indicators",
+        "Identified Operational Challenges",
+        "Recommended Interventions",
+        "Expected Operational Benefits",
+        "Data Limitations",
+        "Conclusion",
+        "References"
+    ],
+    "validation_checks": {
+        "docx_exists": true,
+        "docx_reopens_successfully": true,
+        "docx_required_sections_present": true,
+        "pdf_exists": true,
+        "pdf_reopens_successfully": true,
+        "pdf_text_available": true,
+        "pdf_required_sections_present": true,
+        "pdf_text_verification": true
+    },
+    "all_checks_passed": true
+}

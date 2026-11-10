@@ -1,0 +1,41 @@
+Column,Missing Count,Missing Percentage,Non-Missing Count,Data Type
+Customer Lname,8,0.0044,180511,object
+Customer Zipcode,3,0.0017,180516,float64
+Type,0,0.0,180519,object
+Order Item Profit Ratio,0,0.0,180519,float64
+Order City,0,0.0,180519,object
+Order Country,0,0.0,180519,object
+Order Customer Id,0,0.0,180519,int64
+Order Item Discount,0,0.0,180519,float64
+Order Item Discount Rate,0,0.0,180519,float64
+Order Item Product Price,0,0.0,180519,float64
+Order Item Quantity,0,0.0,180519,int64
+Longitude,0,0.0,180519,float64
+Sales,0,0.0,180519,float64
+Order Item Total,0,0.0,180519,float64
+Order Profit Per Order,0,0.0,180519,float64
+Order Region,0,0.0,180519,object
+Order State,0,0.0,180519,object
+Order Status,0,0.0,180519,object
+Product Name,0,0.0,180519,object
+Product Price,0,0.0,180519,float64
+Market,0,0.0,180519,object
+Latitude,0,0.0,180519,float64
+Days for shipping (real),0,0.0,180519,int64
+Department Name,0,0.0,180519,object
+Days for shipment (scheduled),0,0.0,180519,int64
+Benefit per order,0,0.0,180519,float64
+Sales per customer,0,0.0,180519,float64
+Delivery Status,0,0.0,180519,object
+Late_delivery_risk,0,0.0,180519,int64
+Category Id,0,0.0,180519,int64
+Category Name,0,0.0,180519,object
+Customer City,0,0.0,180519,object
+Customer Country,0,0.0,180519,object
+Customer Fname,0,0.0,180519,object
+Customer Id,0,0.0,180519,int64
+Customer Segment,0,0.0,180519,object
+Customer State,0,0.0,180519,object
+Customer Street,0,0.0,180519,object
+Department Id,0,0.0,180519,int64
+Shipping Mode,0,0.0,180519,object

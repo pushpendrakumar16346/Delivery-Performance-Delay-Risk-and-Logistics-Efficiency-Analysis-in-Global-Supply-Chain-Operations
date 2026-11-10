@@ -1,0 +1,64 @@
+{
+    "report_name": "Five Required Logistics KPIs",
+    "generated_at": "2026-11-09T01:21:22",
+    "source_file": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\delivery_gap_analysis.csv",
+    "shared_calculation_module": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\src\\kpi_calculations.py",
+    "population": {
+        "source_records": 180519,
+        "cancelled_records": 7754,
+        "invalid_duration_records": 0,
+        "eligible_records": 172765,
+        "invalid_risk_records_in_eligible": 0,
+        "missing_shipping_mode_records": 0,
+        "missing_region_records": 0
+    },
+    "kpi_definitions": {
+        "On-Time Delivery Rate (%)": "Eligible shipments with actual shipping duration <= scheduled shipping duration / all eligible shipments * 100.",
+        "Average Delivery Delay (Days)": "Mean of positive delivery gaps among delayed eligible shipments. Early and on-time shipments are excluded from this average.",
+        "Late Delivery Risk Ratio": "Eligible records with valid Late_delivery_risk = 1 / eligible records with valid binary Late_delivery_risk values * 100.",
+        "Shipping Mode Efficiency Index": "For each shipping mode: 50% SLA compliance + 30% inverse late-risk score + 20% relative delay-gap score. Each component is on a 0-100 scale. Relative delay-gap score is inversely scaled across modes.",
+        "Regional Delay Index": "For each region: average positive delivery gap / highest regional average positive delivery gap * 100. Regions with no delayed shipments receive 0. The highest-delay region receives 100."
+    },
+    "kpi_values": {
+        "On-Time Delivery Rate (%)": 42.71003964923451,
+        "Average Delivery Delay (Days)": 1.6181840225506936,
+        "Late Delivery Risk Ratio": 57.28996035076549,
+        "Shipping Mode Efficiency Index": 39.80159268541764,
+        "Regional Delay Index": 96.249836654929
+    },
+    "shipping_mode_efficiency_index": {
+        "Same Day": 61.65716130420746,
+        "Standard Class": 61.412428984289086,
+        "First Class": 20.0,
+        "Second Class": 16.13678045317399
+    },
+    "regional_delay_index": {
+        "Central Asia": 100.0,
+        "Eastern Asia": 98.54943995435025,
+        "South of USA": 98.37734911830451,
+        "West of USA": 97.86447812738793,
+        "Northern Europe": 97.25310357606077,
+        "South Asia": 97.14155373675031,
+        "Western Europe": 97.07744578486654,
+        "West Africa": 97.05750506553821,
+        "Eastern Europe": 96.91176837727853,
+        "Caribbean": 96.87103128263657,
+        "Canada": 96.8048488476504,
+        "Oceania": 96.46703679676109,
+        "South America": 96.45224072415469,
+        "Central America": 96.09385460740208,
+        "Central Africa": 95.73065283182015,
+        "North Africa": 95.41509692293424,
+        "West Asia": 95.26725497040131,
+        "Southeast Asia": 95.21695343300553,
+        "East Africa": 95.04604660246684,
+        "East of USA": 94.95285550949107,
+        "US Center": 94.80989848808993,
+        "Southern Europe": 92.91523821589755,
+        "Southern Africa": 91.47059009011849
+    },
+    "cancellation_treatment": "Cancelled shipments are excluded.",
+    "invalid_record_treatment": "Missing or negative actual/scheduled durations are excluded. Invalid late-risk labels are excluded only from late-risk calculations. Missing shipping mode or region values are excluded only from their respective breakdowns.",
+    "same_day_treatment": "Valid zero scheduled duration records are retained.",
+    "dashboard_parity": "A shared calculation module is generated for both notebook and dashboard use. Dashboard must import and call this module after applying equivalent filters."
+}

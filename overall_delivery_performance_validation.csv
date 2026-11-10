@@ -1,0 +1,13 @@
+Validation Check,Actual Value,Expected Value,Status
+Total shipment records preserved,180519,180519,PASS
+Eligible shipment classification totals reconcile,172765,172765,PASS
+All shipment categories reconcile,180519,180519,PASS
+Delivery classification percentages reconcile,100.0,100.0,PASS
+Delivery status distribution reconciles,180519,180519,PASS
+Risk distribution reconciles,172765,172765,PASS
+Risk comparison population reconciles,172765,172765,PASS
+Risk mismatch records reconcile,172765,172765,PASS
+On-time delivery percentage within valid range,18.6357,0 to 100,PASS
+Delayed delivery percentage within valid range,57.29,0 to 100,PASS
+Early delivery percentage within valid range,24.0743,0 to 100,PASS
+Delivery delay statistics are valid,Valid,Valid,PASS

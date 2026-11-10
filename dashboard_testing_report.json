@@ -1,0 +1,71 @@
+{
+    "report_title": "Complete Streamlit Dashboard Testing Report",
+    "project": "Analysis in Global Supply Chain Operations",
+    "generated_at": "2026-11-09T01:22:04.857270",
+    "dashboard_path": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\app.py",
+    "data_source": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\delivery_gap_analysis.csv",
+    "dataset_rows": 180519,
+    "dataset_columns": 39,
+    "eligible_shipments": 172765,
+    "delivery_classification": {
+        "delayed_shipments": 98977,
+        "exactly_on_time_shipments": 32196,
+        "early_shipments": 41592,
+        "sla_compliant_shipments": 73788,
+        "project_on_time_delivery_rate_percent": 42.71,
+        "exact_on_time_percentage": 18.64,
+        "average_delivery_delay_days": 1.62,
+        "late_delivery_risk_ratio_percent": 57.29
+    },
+    "date_filter_status": "BLOCKED - NO GENUINE DATE COLUMN",
+    "synthetic_dates_created": false,
+    "required_modules": {
+        "Delivery Performance Overview": true,
+        "Delay Risk Analysis": true,
+        "Shipping Mode Comparison": true,
+        "Regional and Market Heatmaps": true
+    },
+    "required_features": {
+        "Shipping Mode filter": true,
+        "Order Region filter": true,
+        "Market filter": true,
+        "Customer Segment filter": true,
+        "Reset filters": true,
+        "Date filter limitation": true,
+        "On-Time Delivery Rate KPI": true,
+        "Average Delivery Delay KPI": true,
+        "Late Delivery Risk Ratio KPI": true,
+        "Shipping Mode Efficiency Index": true,
+        "Regional Delay Index": true,
+        "CSV downloads": true,
+        "Error handling": true,
+        "Dashboard navigation": true
+    },
+    "dependencies": {
+        "streamlit": true,
+        "plotly": true,
+        "pandas": true,
+        "numpy": true
+    },
+    "test_results": {
+        "complete_dashboard_file_created": true,
+        "python_syntax_valid": true,
+        "exactly_four_required_modules_present": true,
+        "all_required_global_filters_present": true,
+        "five_required_kpis_present": true,
+        "delivery_classification_reconciles": true,
+        "sla_compliance_calculation_correct": true,
+        "date_filter_limitation_documented": true,
+        "synthetic_dates_not_created": true,
+        "report_downloads_present": true,
+        "error_handling_present": true,
+        "streamlit_dependency_available": true,
+        "plotly_dependency_available": true,
+        "pandas_dependency_available": true,
+        "numpy_dependency_available": true
+    },
+    "passed_checks": 15,
+    "total_checks": 15,
+    "failed_checks": 0,
+    "status": "PASS"
+}

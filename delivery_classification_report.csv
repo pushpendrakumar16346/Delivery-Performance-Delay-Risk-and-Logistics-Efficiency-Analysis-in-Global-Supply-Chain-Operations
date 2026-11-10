@@ -1,0 +1,6 @@
+Delivery Classification,Record Count,Percentage of All Records,Percentage of Eligible Records
+Delayed,98977,54.82913155955883,57.28996035076549
+On-time,32196,17.835241719708176,18.63571904031488
+Early,41592,23.040233991989766,24.07432060891963
+Cancelled,7754,4.295392728743234,
+Ineligible,0,0.0,

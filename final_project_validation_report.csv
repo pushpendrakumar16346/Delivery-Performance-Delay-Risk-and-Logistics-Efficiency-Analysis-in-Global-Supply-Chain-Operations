@@ -1,0 +1,49 @@
+Validation,Status,Details
+Raw dataset verification,PASS,"Shape=(180519, 40)"
+Cleaned dataset verification,PASS,"Shape=(180519, 32)"
+Delivery gap dataset verification,PASS,"Shape=(180519, 39)"
+Project directory verification,PASS,C:\Users\hp\Analysis in Global Supply Chain Operations
+Column verification,PASS,Missing columns=[]; total columns=32
+Missing-value verification,PASS,Missing values inspected=0
+Duplicate verification,PASS,Exact duplicate rows=0
+Shipping duration verification,PASS,Invalid duration records=0; zero scheduled-duration records=9737
+Late delivery risk verification,PASS,"Observed values=[0, 1]"
+Regional and market verification,PASS,Regions=23; Markets=5
+Customer segment verification,PASS,Segments=3
+Delivery gap verification,PASS,Reconstructed directly from actual minus scheduled duration; no exact stored numeric gap column required; valid gaps=180519; minimum=-2; maximum=4
+Delivery classification verification,PASS,Delayed=98977; exact on-time=32196; early=41592; eligible=172765
+Delivery performance calculations,PASS,Eligible=172765; delayed=98977; average positive delay=1.6182 days
+SLA calculations,PASS,SLA-compliant records=73788; eligible=172765; SLA compliance=42.7100%
+Shipping mode calculations,PASS,Independently recalculated 4 shipping modes
+Regional analysis calculations,PASS,Independently recalculated 23 regions
+Market analysis calculations,PASS,Independently recalculated 5 markets
+Customer segment calculations,PASS,Independently recalculated 3 segments
+Late delivery risk calculations,PASS,Valid risk records=172765; risk ratio=57.2900%
+Five KPI calculations,PASS,"Valid KPI calculations=5/5; values={'On-Time Delivery Rate (%)': 42.71003964923451, 'Average Delivery Delay (Days)': 1.6181840225506936, 'Late Delivery Risk Ratio': 57.28996035076549, 'Shipping Mode Efficiency Index': 34.47199023976235, 'Regional Delay Index': 96.24983665492901}"
+All chart data verification,PASS,Chart-related CSV files=61; readable=61
+Dashboard Python syntax,PASS,Python syntax valid
+Delivery Performance module,PASS,Module reference found
+Delay Risk module,PASS,Module reference found
+Shipping Mode module,PASS,Module reference found
+Regional and Market module,PASS,Module reference found
+Shipping mode filter,PASS,Filter reference found
+Region and market selector,PASS,Filter reference found
+Customer segment filter,PASS,Filter reference found
+Date range selector,PASS,Not applicable: no genuine operational date column; synthetic dates not created
+Report downloads,PASS,Download implementation detected
+Dashboard performance,PASS,Saved smoke test evidence files=1
+Application error handling,PASS,Exception handling detected
+Research paper verification,PASS,Readable documents=2
+Research paper verification content verification,PASS,Missing required terms=[]
+Executive summary verification,PASS,Readable documents=2
+Executive summary verification content verification,PASS,Missing required terms=[]
+README verification,PASS,README.md generated and saved
+Installation guide verification,PASS,INSTALLATION_GUIDE.md generated and saved
+User guide verification,PASS,USER_GUIDE.md generated and saved
+Technical documentation verification,PASS,TECHNICAL_DOCUMENTATION.md generated and saved
+Requirements file verification,PASS,Found requirements.txt
+Project directory structure verification,PASS,Missing directories=[]
+Output file verification,PASS,Project files=183; output files=150
+Final validation report,PASS,"Final CSV, JSON and completion report are generated"
+Submission archive generation,PASS,Archive=C:\Users\hp\Analysis in Global Supply Chain Operations\outputs\final_archives\final_submission_20261109_013959.zip; entries=180; size=75670105 bytes
+ZIP archive integrity test,PASS,Bad file=None; entries=180

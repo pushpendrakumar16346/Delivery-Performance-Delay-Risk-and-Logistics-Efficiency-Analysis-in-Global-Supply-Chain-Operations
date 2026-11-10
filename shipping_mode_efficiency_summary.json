@@ -1,0 +1,46 @@
+{
+    "project": "Analysis in Global Supply Chain Operations",
+    "analysis": "Shipping Mode Efficiency Analysis",
+    "source_file": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\delivery_gap_analysis.csv",
+    "total_records": 180519,
+    "shipping_modes": [
+        "First Class",
+        "Same Day",
+        "Second Class",
+        "Standard Class"
+    ],
+    "total_eligible_shipments": 172765,
+    "total_cancelled_shipments": 7754,
+    "total_delayed_shipments": 98977,
+    "total_on_time_shipments": 32196,
+    "total_early_shipments": 41592,
+    "highest_delay_frequency_mode": "First Class",
+    "best_sla_compliance_mode": "Standard Class",
+    "highest_late_delivery_risk_mode": "First Class",
+    "best_efficiency_mode": "Standard Class",
+    "efficiency_index_formula": "50% SLA compliance + 30% inverse late delivery risk + 20% relative average delay-gap score",
+    "validation_passed": 34,
+    "validation_failed": 0,
+    "validation_status": "PASS",
+    "output_files": {
+        "comparison": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_comparison.csv",
+        "sla": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_sla_report.csv",
+        "ranking": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_efficiency_ranking.csv",
+        "status_counts": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_delivery_status_counts.csv",
+        "status_percentages": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_delivery_status_percentages.csv",
+        "delay_gap": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\tables\\shipping_mode_delay_gap_summary.csv",
+        "efficiency_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\shipping_mode_efficiency_report.csv",
+        "individual_mode": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\shipping_mode_individual_comparison.csv",
+        "eligible_records": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\shipping_mode_eligible_delivery_records.csv",
+        "validation": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\shipping_mode_analysis_validation.csv"
+    },
+    "figure_files": [
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_delayed_percentage.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_on_time_percentage.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_sla_compliance.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_average_delay_gap.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_late_delivery_risk.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_efficiency_index.png",
+        "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\figures\\shipping_mode_delivery_status_comparison.png"
+    ]
+}

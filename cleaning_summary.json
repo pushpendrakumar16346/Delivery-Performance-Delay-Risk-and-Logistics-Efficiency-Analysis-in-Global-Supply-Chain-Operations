@@ -1,0 +1,137 @@
+{
+    "project_name": "Analysis in Global Supply Chain Operations",
+    "source_file": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\raw\\APL_Logistics.xlsx",
+    "cleaned_file": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\cleaned_logistics_data.csv",
+    "execution_timestamp": "2026-11-09T01:13:58.339176",
+    "original_records": 180519,
+    "original_columns": 40,
+    "records_removed_as_exact_duplicates": 0,
+    "records_excluded_for_critical_delivery_errors": 0,
+    "total_records_removed": 0,
+    "final_records": 180519,
+    "final_columns": 32,
+    "record_count_reconciled": true,
+    "missing_customer_last_names": 8,
+    "missing_customer_zipcodes": 3,
+    "identifier_mismatches": 0,
+    "zero_scheduled_shipping_durations": 9737,
+    "extreme_actual_shipping_durations": 0,
+    "extreme_scheduled_shipping_durations": 0,
+    "records_with_validation_flags": 28389,
+    "critical_invalid_records_excluded": 0,
+    "financial_outliers": {
+        "Sales": 488,
+        "Order Item Total": 1943,
+        "Order Profit Per Order": 18942,
+        "Benefit per order": 18942
+    },
+    "personal_columns_removed": [
+        "Customer Fname",
+        "Customer Lname",
+        "Customer Id",
+        "Order Customer Id",
+        "Customer Street",
+        "Customer Zipcode",
+        "Customer City",
+        "Customer State",
+        "Customer Country"
+    ],
+    "cleaning_decisions": [
+        "Exact duplicate rows were removed.",
+        "Missing customer last names were retained without fabrication.",
+        "Missing customer ZIP codes were retained without fabrication.",
+        "No dedicated Order ID exists; customer IDs were not treated as unique order identifiers.",
+        "Numeric columns were converted using safe numeric conversion.",
+        "Infinite numeric values were converted to missing values and documented.",
+        "Negative shipping durations were treated as critical invalid delivery records.",
+        "Zero scheduled shipping durations were investigated and retained.",
+        "Extreme shipping durations were flagged and retained.",
+        "Categorical values were standardized without translating country or state names.",
+        "Invalid geographic coordinates were flagged and retained for review.",
+        "Late delivery risk was validated against values 0 and 1.",
+        "Negative profit values were retained because they may represent legitimate losses.",
+        "Financial outliers were flagged and retained.",
+        "Personal customer identifiers were excluded from the analytical dataset and row-level reports.",
+        "Only critical invalid delivery records were excluded."
+    ],
+    "validation_results": {
+        "Required source columns available": {
+            "status": "PASS",
+            "details": "Missing columns: []"
+        },
+        "No exact duplicate records in cleaned data": {
+            "status": "PASS",
+            "details": "Duplicate count: 0"
+        },
+        "Actual shipping duration is numeric": {
+            "status": "PASS",
+            "details": "int64"
+        },
+        "Scheduled shipping duration is numeric": {
+            "status": "PASS",
+            "details": "int64"
+        },
+        "No negative actual shipping durations": {
+            "status": "PASS",
+            "details": "Minimum: 0"
+        },
+        "No negative scheduled shipping durations": {
+            "status": "PASS",
+            "details": "Minimum: 0"
+        },
+        "Late delivery risk contains only valid values": {
+            "status": "PASS",
+            "details": "Values: [0, 1]"
+        },
+        "Delivery status values are standardized": {
+            "status": "PASS",
+            "details": "Values: ['Advance shipping', 'Late delivery', 'Shipping canceled', 'Shipping on time']"
+        },
+        "Shipping mode values are standardized": {
+            "status": "PASS",
+            "details": "Values: ['First Class', 'Same Day', 'Second Class', 'Standard Class']"
+        },
+        "Customer segment values are standardized": {
+            "status": "PASS",
+            "details": "Values: ['Consumer', 'Corporate', 'Home Office']"
+        },
+        "Market values are standardized": {
+            "status": "PASS",
+            "details": "Values: ['Africa', 'Europe', 'LATAM', 'Pacific Asia', 'USCA']"
+        },
+        "Geographic coordinates are within valid ranges": {
+            "status": "PASS",
+            "details": "Invalid coordinate records retained for review: 0"
+        },
+        "Order quantity is positive and integral": {
+            "status": "PASS",
+            "details": "Quantity must be a positive whole number"
+        },
+        "No personal identifier columns in analytical dataset": {
+            "status": "PASS",
+            "details": "Removed columns: ['Customer Fname', 'Customer Lname', 'Customer Id', 'Order Customer Id', 'Customer Street', 'Customer Zipcode', 'Customer City', 'Customer State', 'Customer Country']"
+        },
+        "No missing essential delivery fields": {
+            "status": "PASS",
+            "details": "Essential delivery fields checked"
+        },
+        "Record counts reconciled": {
+            "status": "PASS",
+            "details": "Original: 180519; Duplicates removed: 0; Critical exclusions: 0; Final: 180519; Expected final: 180519"
+        }
+    },
+    "output_files": {
+        "cleaned_dataset": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\data\\processed\\cleaned_logistics_data.csv",
+        "missing_value_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\missing_value_report.csv",
+        "duplicate_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\duplicate_validation_report.csv",
+        "invalid_records_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\invalid_records_report.csv",
+        "data_quality_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\data_quality_validation_report.csv",
+        "financial_outlier_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\financial_outlier_report.csv",
+        "identifier_validation_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\identifier_validation_report.csv",
+        "numeric_validation_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\numeric_validation_report.csv",
+        "categorical_validation_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\categorical_validation_report.csv",
+        "geographic_validation_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\geographic_validation_report.csv",
+        "shipping_duration_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\shipping_duration_report.csv",
+        "missing_customer_investigation_report": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\reports\\missing_customer_investigation_report.csv"
+    }
+}

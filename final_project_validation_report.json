@@ -1,0 +1,255 @@
+{
+    "project": "Analysis in Global Supply Chain Operations",
+    "project_directory": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations",
+    "verification_timestamp": "2026-11-09T01:40:43",
+    "total_checks": 48,
+    "passed": 48,
+    "failed": 0,
+    "warnings": 0,
+    "checks": [
+        {
+            "Validation": "Raw dataset verification",
+            "Status": "PASS",
+            "Details": "Shape=(180519, 40)"
+        },
+        {
+            "Validation": "Cleaned dataset verification",
+            "Status": "PASS",
+            "Details": "Shape=(180519, 32)"
+        },
+        {
+            "Validation": "Delivery gap dataset verification",
+            "Status": "PASS",
+            "Details": "Shape=(180519, 39)"
+        },
+        {
+            "Validation": "Project directory verification",
+            "Status": "PASS",
+            "Details": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations"
+        },
+        {
+            "Validation": "Column verification",
+            "Status": "PASS",
+            "Details": "Missing columns=[]; total columns=32"
+        },
+        {
+            "Validation": "Missing-value verification",
+            "Status": "PASS",
+            "Details": "Missing values inspected=0"
+        },
+        {
+            "Validation": "Duplicate verification",
+            "Status": "PASS",
+            "Details": "Exact duplicate rows=0"
+        },
+        {
+            "Validation": "Shipping duration verification",
+            "Status": "PASS",
+            "Details": "Invalid duration records=0; zero scheduled-duration records=9737"
+        },
+        {
+            "Validation": "Late delivery risk verification",
+            "Status": "PASS",
+            "Details": "Observed values=[0, 1]"
+        },
+        {
+            "Validation": "Regional and market verification",
+            "Status": "PASS",
+            "Details": "Regions=23; Markets=5"
+        },
+        {
+            "Validation": "Customer segment verification",
+            "Status": "PASS",
+            "Details": "Segments=3"
+        },
+        {
+            "Validation": "Delivery gap verification",
+            "Status": "PASS",
+            "Details": "Reconstructed directly from actual minus scheduled duration; no exact stored numeric gap column required; valid gaps=180519; minimum=-2; maximum=4"
+        },
+        {
+            "Validation": "Delivery classification verification",
+            "Status": "PASS",
+            "Details": "Delayed=98977; exact on-time=32196; early=41592; eligible=172765"
+        },
+        {
+            "Validation": "Delivery performance calculations",
+            "Status": "PASS",
+            "Details": "Eligible=172765; delayed=98977; average positive delay=1.6182 days"
+        },
+        {
+            "Validation": "SLA calculations",
+            "Status": "PASS",
+            "Details": "SLA-compliant records=73788; eligible=172765; SLA compliance=42.7100%"
+        },
+        {
+            "Validation": "Shipping mode calculations",
+            "Status": "PASS",
+            "Details": "Independently recalculated 4 shipping modes"
+        },
+        {
+            "Validation": "Regional analysis calculations",
+            "Status": "PASS",
+            "Details": "Independently recalculated 23 regions"
+        },
+        {
+            "Validation": "Market analysis calculations",
+            "Status": "PASS",
+            "Details": "Independently recalculated 5 markets"
+        },
+        {
+            "Validation": "Customer segment calculations",
+            "Status": "PASS",
+            "Details": "Independently recalculated 3 segments"
+        },
+        {
+            "Validation": "Late delivery risk calculations",
+            "Status": "PASS",
+            "Details": "Valid risk records=172765; risk ratio=57.2900%"
+        },
+        {
+            "Validation": "Five KPI calculations",
+            "Status": "PASS",
+            "Details": "Valid KPI calculations=5/5; values={'On-Time Delivery Rate (%)': 42.71003964923451, 'Average Delivery Delay (Days)': 1.6181840225506936, 'Late Delivery Risk Ratio': 57.28996035076549, 'Shipping Mode Efficiency Index': 34.47199023976235, 'Regional Delay Index': 96.24983665492901}"
+        },
+        {
+            "Validation": "All chart data verification",
+            "Status": "PASS",
+            "Details": "Chart-related CSV files=61; readable=61"
+        },
+        {
+            "Validation": "Dashboard Python syntax",
+            "Status": "PASS",
+            "Details": "Python syntax valid"
+        },
+        {
+            "Validation": "Delivery Performance module",
+            "Status": "PASS",
+            "Details": "Module reference found"
+        },
+        {
+            "Validation": "Delay Risk module",
+            "Status": "PASS",
+            "Details": "Module reference found"
+        },
+        {
+            "Validation": "Shipping Mode module",
+            "Status": "PASS",
+            "Details": "Module reference found"
+        },
+        {
+            "Validation": "Regional and Market module",
+            "Status": "PASS",
+            "Details": "Module reference found"
+        },
+        {
+            "Validation": "Shipping mode filter",
+            "Status": "PASS",
+            "Details": "Filter reference found"
+        },
+        {
+            "Validation": "Region and market selector",
+            "Status": "PASS",
+            "Details": "Filter reference found"
+        },
+        {
+            "Validation": "Customer segment filter",
+            "Status": "PASS",
+            "Details": "Filter reference found"
+        },
+        {
+            "Validation": "Date range selector",
+            "Status": "PASS",
+            "Details": "Not applicable: no genuine operational date column; synthetic dates not created"
+        },
+        {
+            "Validation": "Report downloads",
+            "Status": "PASS",
+            "Details": "Download implementation detected"
+        },
+        {
+            "Validation": "Dashboard performance",
+            "Status": "PASS",
+            "Details": "Saved smoke test evidence files=1"
+        },
+        {
+            "Validation": "Application error handling",
+            "Status": "PASS",
+            "Details": "Exception handling detected"
+        },
+        {
+            "Validation": "Research paper verification",
+            "Status": "PASS",
+            "Details": "Readable documents=2"
+        },
+        {
+            "Validation": "Research paper verification content verification",
+            "Status": "PASS",
+            "Details": "Missing required terms=[]"
+        },
+        {
+            "Validation": "Executive summary verification",
+            "Status": "PASS",
+            "Details": "Readable documents=2"
+        },
+        {
+            "Validation": "Executive summary verification content verification",
+            "Status": "PASS",
+            "Details": "Missing required terms=[]"
+        },
+        {
+            "Validation": "README verification",
+            "Status": "PASS",
+            "Details": "README.md generated and saved"
+        },
+        {
+            "Validation": "Installation guide verification",
+            "Status": "PASS",
+            "Details": "INSTALLATION_GUIDE.md generated and saved"
+        },
+        {
+            "Validation": "User guide verification",
+            "Status": "PASS",
+            "Details": "USER_GUIDE.md generated and saved"
+        },
+        {
+            "Validation": "Technical documentation verification",
+            "Status": "PASS",
+            "Details": "TECHNICAL_DOCUMENTATION.md generated and saved"
+        },
+        {
+            "Validation": "Requirements file verification",
+            "Status": "PASS",
+            "Details": "Found requirements.txt"
+        },
+        {
+            "Validation": "Project directory structure verification",
+            "Status": "PASS",
+            "Details": "Missing directories=[]"
+        },
+        {
+            "Validation": "Output file verification",
+            "Status": "PASS",
+            "Details": "Project files=183; output files=150"
+        },
+        {
+            "Validation": "Final validation report",
+            "Status": "PASS",
+            "Details": "Final CSV, JSON and completion report are generated"
+        },
+        {
+            "Validation": "Submission archive generation",
+            "Status": "PASS",
+            "Details": "Archive=C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\final_archives\\final_submission_20261109_013959.zip; entries=180; size=75670105 bytes"
+        },
+        {
+            "Validation": "ZIP archive integrity test",
+            "Status": "PASS",
+            "Details": "Bad file=None; entries=180"
+        }
+    ],
+    "archive_path": "C:\\Users\\hp\\Analysis in Global Supply Chain Operations\\outputs\\final_archives\\final_submission_20261109_013959.zip",
+    "archive_entries": 180,
+    "archive_integrity": true,
+    "overall_status": "ALL CHECKS PASSED"
+}

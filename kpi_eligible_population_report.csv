@@ -1,0 +1,8 @@
+Population Measure,Record Count
+source_records,180519
+cancelled_records,7754
+invalid_duration_records,0
+eligible_records,172765
+invalid_risk_records_in_eligible,0
+missing_shipping_mode_records,0
+missing_region_records,0

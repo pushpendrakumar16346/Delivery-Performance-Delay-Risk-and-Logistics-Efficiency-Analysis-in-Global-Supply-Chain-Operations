@@ -1,0 +1,22 @@
+Column,Conversion Failures,Infinite Values
+Days for shipping (real),0,0
+Days for shipment (scheduled),0,0
+Benefit per order,0,0
+Sales per customer,0,0
+Late_delivery_risk,0,0
+Category Id,0,0
+Customer Id,0,0
+Customer Zipcode,0,0
+Department Id,0,0
+Latitude,0,0
+Longitude,0,0
+Order Customer Id,0,0
+Order Item Discount,0,0
+Order Item Discount Rate,0,0
+Order Item Product Price,0,0
+Order Item Profit Ratio,0,0
+Order Item Quantity,0,0
+Sales,0,0
+Order Item Total,0,0
+Order Profit Per Order,0,0
+Product Price,0,0

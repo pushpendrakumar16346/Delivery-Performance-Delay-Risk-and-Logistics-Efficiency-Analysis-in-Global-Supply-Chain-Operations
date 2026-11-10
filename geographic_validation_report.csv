@@ -1,0 +1,6 @@
+Validation,Count
+Missing latitude,0
+Latitude outside valid range,0
+Missing longitude,0
+Longitude outside valid range,0
+Invalid geographic coordinate records,0

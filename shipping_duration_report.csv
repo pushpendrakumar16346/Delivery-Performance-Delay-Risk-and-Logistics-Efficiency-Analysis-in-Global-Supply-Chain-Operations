@@ -1,0 +1,10 @@
+Validation,Count
+Missing actual shipping duration,0
+Missing scheduled shipping duration,0
+Negative actual shipping duration,0
+Negative scheduled shipping duration,0
+Zero scheduled shipping duration,9737
+Zero scheduled duration with Same Day mode,9737
+Zero scheduled duration with other modes,0
+Extreme actual shipping durations by IQR,0
+Extreme scheduled shipping durations by IQR,0

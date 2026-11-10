@@ -1,0 +1,16 @@
+Validation Check,Status,Details
+Input dataset loaded,PASS,"Source records: 180,519"
+All required columns available,PASS,All required source columns found
+Eligible record population excludes cancellations,PASS,"Eligible records: 172,765"
+Eligible population excludes invalid durations,PASS,All eligible durations are valid and nonnegative
+Delivery gap formula verified,PASS,Actual duration minus scheduled duration
+On-Time Delivery Rate formula verified,PASS,SLA-compliant eligible records divided by all eligible records
+Average Delivery Delay formula verified,PASS,Mean positive delivery gap among delayed shipments
+Late Delivery Risk Ratio formula verified,PASS,Mean valid binary late-risk label multiplied by 100
+Shipping Mode Efficiency Index calculated,PASS,Mode-wise index values are within 0-100
+Regional Delay Index calculated,PASS,Region-wise index values are within 0-100
+All five required KPIs present,PASS,Exactly five required KPIs calculated
+Zero scheduled duration records retained,PASS,Valid zero scheduled duration records are not automatically excluded
+Notebook and dashboard shared KPI engine parity,PASS,Both calculation paths use the same reusable KPI module and input population
+Equivalent shipping-mode filter KPI parity,PASS,Both calculation paths tested with Shipping Mode = First Class
+KPI output files generated and verified,PASS,Verified files: 14/14
