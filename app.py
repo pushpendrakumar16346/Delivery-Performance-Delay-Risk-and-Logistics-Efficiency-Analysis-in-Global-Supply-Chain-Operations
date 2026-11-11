@@ -48,8 +48,7 @@ st.caption(
 # DATA LOADING AND COLUMN IDENTIFICATION
 
 @st.cache_data(show_spinner="Downloading and loading logistics datasets...")
-def load_data():
-@st.cache_data(show_spinner="Downloading and loading logistics dataset...")
+
 def load_data():
 
     if not DATA_FILE.exists():
