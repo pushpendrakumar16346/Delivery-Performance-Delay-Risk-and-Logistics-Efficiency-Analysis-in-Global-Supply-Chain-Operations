@@ -79,14 +79,21 @@ def load_data():
         raise ValueError("The logistics dataset is empty.")
 
     return df, str(path)
+  
 def find_column(df, candidates):
+    normalized = {
+        str(c).strip().lower().replace("_", " ").replace("-", " "): c
+        for c in df.columns
+    }
 
     for candidate in candidates:
-        key = candidate.strip().lower().replace("_", " ").replace("-", " ")
+        key = str(candidate).strip().lower().replace("_", " ").replace("-", " ")
+
         if key in normalized:
             return normalized[key]
 
     return None
+
 
 
 def prepare_data(source):
