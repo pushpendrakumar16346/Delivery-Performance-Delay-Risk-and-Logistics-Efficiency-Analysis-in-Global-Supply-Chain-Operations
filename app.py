@@ -1,6 +1,7 @@
 
 from pathlib import Path
 import warnings
+import gdown
 
 import numpy as np
 import pandas as pd
@@ -11,8 +12,15 @@ import plotly.graph_objects as go
 warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_FILE = PROJECT_ROOT / "data" / "processed" / "delivery_gap_analysis.csv"
-CLEANED_FILE = PROJECT_ROOT / "data" / "processed" / "cleaned_logistics_data.csv"
+DATA_DIR = PROJECT_ROOT / "data" / "processed"
+
+DATA_FILE = DATA_DIR / "delivery_gap_analysis.csv"
+CLEANED_FILE = DATA_DIR / "cleaned_logistics_data.csv"
+
+GAP_FILE_ID = "12hs2Z9nrCwiTw-mSbf7goNlHIrx8Bizk"
+CLEANED_FILE_ID = "1bcxPQdjsYHtP87ezmFmwoxSjanQO8J7Z"
+
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
 REPORT_DIR = OUTPUT_DIR / "reports"
@@ -41,14 +49,28 @@ st.caption(
 
 # DATA LOADING AND COLUMN IDENTIFICATION
 
-@st.cache_data(show_spinner="Loading logistics dataset...")
+@st.cache_data(show_spinner="Downloading and loading logistics datasets...")
 def load_data():
-    if DATA_FILE.exists():
-        path = DATA_FILE
-    elif CLEANED_FILE.exists():
-        path = CLEANED_FILE
-    else:
-        raise FileNotFoundError("Processed logistics dataset not found.")
+
+    if not CLEANED_FILE.exists():
+        result = gdown.download(
+            id=CLEANED_FILE_ID,
+            output=str(CLEANED_FILE),
+            quiet=False
+        )
+        if not result:
+            raise FileNotFoundError("Could not download cleaned logistics dataset.")
+
+    if not DATA_FILE.exists():
+        result = gdown.download(
+            id=GAP_FILE_ID,
+            output=str(DATA_FILE),
+            quiet=False
+        )
+        if not result:
+            raise FileNotFoundError("Could not download delivery gap dataset.")
+
+    path = DATA_FILE if DATA_FILE.exists() else CLEANED_FILE
 
     df = pd.read_csv(path, low_memory=False)
     df.columns = df.columns.astype(str).str.strip()
@@ -57,13 +79,7 @@ def load_data():
         raise ValueError("The logistics dataset is empty.")
 
     return df, str(path)
-
-
 def find_column(df, candidates):
-    normalized = {
-        str(c).strip().lower().replace("_", " ").replace("-", " "): c
-        for c in df.columns
-    }
 
     for candidate in candidates:
         key = candidate.strip().lower().replace("_", " ").replace("-", " ")
