@@ -1,4 +1,85 @@
 
+Continued from
+Project Links Submit (4)
+there is no logs after ==> Running 'streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.fileWatcherType none'
+Okay. If there are no logs after that line, don't change the dashboard code yet.
+
+Check these two things in Render:
+
+Open Delivery Performance → Events.
+
+Check whether the service shows Instance failed, Exited, Restarted, or Deploy failed.
+
+Open Delivery Performance → Metrics.
+
+Check the Memory graph around the time the dashboard gets stuck on Connecting.
+
+Send me screenshots of Events and Metrics. I'll use them to identify whether Render is restarting the app or running out of memory.
+
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:58 PM
+
+Debug
+Service recovered
+Recently failed instances are now reporting healthy.
+November 11, 2026 at 3:57 PM
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:56 PM
+
+Debug
+Service recovered
+Recently failed instances are now reporting healthy.
+November 11, 2026 at 3:55 PM
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:55 PM
+
+Debug
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:53 PM
+
+Debug
+Service recovered
+Recently failed instances are now reporting healthy.
+November 11, 2026 at 3:53 PM
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:53 PM
+
+Debug
+Service recovered
+Recently failed instances are now reporting healthy.
+November 11, 2026 at 3:52 PM
+Instance failed: mm5xn
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:51 PM
+
+Debug
+Service recovered
+Recently failed instances are now reporting healthy.
+November 11, 2026 at 3:50 PM
+Instance failed: q2mbr
+Ran out of memory (used over 512MB) while running your code.
+November 11, 2026 at 3:50 PM
+…
+Confirmed: Render is killing your dashboard because it exceeds the 512 MB memory limit.
+
+Out of memory — 512 MB exceeded
+Your 59.5 MB CSV downloads successfully, but when Python loads it into Pandas, the actual memory usage can become several times larger. Dashboard calculations, filtering, and charts require additional memory.
+
+There are two ways to fix this:
+
+Code optimization (no extra hosting cost): Reduce memory usage while preserving your existing KPIs, filters, charts, and dashboard features.
+
+Increase Render RAM: Upgrade to an instance with more memory. This is the quicker option, but costs extra.
+
+My recommendation: Try code optimization first. Don't delete any dashboard features or change the analysis.
+
+Send me your current app.py file. I'll check the actual code and identify the memory-heavy sections before suggesting changes.
+
 from pathlib import Path
 import warnings
 import gdown
@@ -1385,3 +1466,235 @@ st.caption(
     f"Filtered records: {len(filtered_data):,} | "
     f"Eligible shipments: {len(eligible):,}"
 )
+
+Worked for 11s
+I reviewed your complete app.py. I found several memory-heavy operations that can contribute to Render's 512 MB limit.
+
+The main issue is unnecessary copies of the 59.5 MB dataset. Your code currently:
+
+Loads and caches the full CSV.
+
+Copies the complete dataset in prepare_data().
+
+Copies it again in filtered_data = data.copy().
+
+Creates additional copies for eligible shipments and risk analysis.
+
+Generates large CSV strings for download buttons.
+
+We can reduce memory usage without removing your four analytical modules, KPIs, filters, charts, or reports.
+
+Step 1 — Make these two changes first
+Change 1: Inside prepare_data()
+
+Find:
+
+def prepare_data(source):
+    df = source.copy()
+
+Replace with:
+
+def prepare_data(source):
+    df = source
+
+Change 2: Inside GLOBAL FILTERS
+
+Find:
+
+filtered_data = data.copy()
+
+Replace with:
+
+filtered_data = data
+
+These changes eliminate two unnecessary full-dataset copies.
+
+Step 2 — Optimize the dataset memory
+Inside load_data(), immediately after:
+
+df.columns = df.columns.astype(str).str.strip()
+
+Add:
+
+# Reduce memory usage without removing dataset columns
+for col in df.select_dtypes(include=["object"]).columns:
+    unique_ratio = df[col].nunique(dropna=False) / max(len(df), 1)
+
+    if unique_ratio <= 0.05:
+        df[col] = df[col].astype("category")
+
+for col in df.select_dtypes(include=["int64"]).columns:
+    df[col] = pd.to_numeric(df[col], downcast="integer")
+
+for col in df.select_dtypes(include=["float64"]).columns:
+    df[col] = pd.to_numeric(df[col], downcast="float")
+
+This retains all dataset columns while reducing memory where possible.
+
+Important: Make only these changes first, commit them to GitHub, and let Render redeploy. Then check whether the service stays healthy.
+
+I have not changed your KPI formulas, dashboard modules, filters, or analytical logic.
+
+ek hi baar me de de shi code pura hi replace krke entirely
+
+Worked for 11s
+
+I've prepared the complete replacement app.py, with memory optimizations and your existing dashboard modules, KPIs, filters, charts, and download reports retained.
+
+Python syntax check passed
+Download the complete optimized app.py
+
+Replace your existing file
+Download the file above.
+
+Open your GitHub repository.
+
+Open the existing app.py.
+
+Click the pencil (Edit) icon.
+
+Select all existing code and delete it.
+
+Open the downloaded file, copy all its code, and paste it into GitHub's editor.
+
+Click Commit changes.
+
+Render will automatically redeploy.
+
+Important: Keep your existing requirements.txt with gdown, streamlit, pandas, numpy, and plotly installed. Don't delete your Google Drive dataset.
+
+After deployment, check whether Render stays healthy and the dashboard opens.
+
+
+app.py
+Code
+
+Context window full
+Start a new chat with an automatic summary of this conversation, or upgrade to continue here with more context available in every chat.
+
+kuch change to nhi kiya jisse kuch probklem na aaye
+
+    st.caption(
+        "Regional and country heatmaps use categorical performance data. "
+        "They do not represent coordinate-based destination maps. "
+        "Customer coordinates are not treated as destination coordinates."
+    )
+    download_csv(
+        region_performance, "regional_dashboard_performance.csv",
+        "Download Regional Performance"
+    )
+    download_csv(
+        country_performance, "country_dashboard_performance.csv",
+        "Download Country Performance"
+    )
+    download_csv(
+        market_performance, "market_dashboard_performance.csv",
+        "Download Market Performance"
+    )
+
+
+# ============================================================
+# GLOBAL REPORT DOWNLOADS
+# ============================================================
+
+st.sidebar.divider()
+st.sidebar.header("Download Analytical Reports")
+
+kpi_download = pd.DataFrame([
+    {"KPI": key, "Value": value} for key, value in kpis.items()
+])
+
+download_csv(
+    filtered_data, "complete_filtered_dashboard_data.csv",
+    "Download Filtered Dataset"
+)
+download_csv(
+    kpi_download, "five_required_dashboard_kpis.csv",
+    "Download Five KPI Results"
+)
+download_csv(
+    mode_performance, "dashboard_shipping_mode_report.csv",
+    "Download Shipping Mode Report"
+)
+download_csv(
+    region_performance, "dashboard_regional_report.csv",
+    "Download Regional Report"
+)
+download_csv(
+    market_performance, "dashboard_market_report.csv",
+    "Download Market Report"
+)
+
+
+# ============================================================
+# DEFINITIONS AND LIMITATIONS
+# ============================================================
+
+with st.expander("Dashboard Definitions and Data Limitations"):
+    st.markdown(
+        """
+        **Delivery eligibility**
+
+        Cancelled shipments and records with missing, invalid or negative
+        actual or scheduled durations are excluded. Valid zero-duration
+        Same Day shipments are retained.
+
+        **Delay Gap**
+
+        Actual shipping duration minus scheduled shipping duration.
+
+        - Positive gap: Delayed.
+        - Zero gap: Exactly on-time.
+        - Negative gap: Early.
+
+        **On-Time Delivery Rate KPI**
+
+        Project-defined KPI: shipments with gap <= 0 divided by all eligible
+        shipments, multiplied by 100. It represents SLA compliance and
+        includes early deliveries.
+
+        **Exact on-time percentage**
+
+        Shipments with gap = 0 divided by all eligible shipments.
+
+        **Average Delivery Delay**
+
+        Mean positive delay gap among delayed eligible shipments only.
+
+        **Late Delivery Risk Ratio**
+
+        Mean of valid binary Late_delivery_risk labels multiplied by 100.
+        It is an existing dataset label, not a new model prediction.
+
+        **Date filter**
+
+        The source dataset does not contain a genuine operational date
+        column. Date filtering is blocked. No synthetic dates are created.
+
+        **Geographic analysis**
+
+        Regional and country visualizations use categorical summaries.
+        Customer coordinates are not interpreted as destination coordinates.
+
+        **Customer segment**
+
+        Consumer, Corporate and Home Office are analyzed as supplied.
+        Corporate is not automatically classified as premium or enterprise.
+
+        **Shipping Mode Efficiency Index**
+
+        Project-defined weighting: 50% SLA compliance, 30% inverse late
+        risk and 20% relative delay-gap score.
+        """
+    )
+
+st.divider()
+st.caption(
+    "Global Supply Chain Operations | Delivery Performance and Logistics Efficiency"
+)
+st.caption(
+    f"Source records: {len(data):,} | "
+    f"Filtered records: {len(filtered_data):,} | "
+    f"Eligible shipments: {len(eligible):,}"
+)
+
