@@ -15,10 +15,8 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 DATA_DIR = PROJECT_ROOT / "data" / "processed"
 
 DATA_FILE = DATA_DIR / "delivery_gap_analysis.csv"
-CLEANED_FILE = DATA_DIR / "cleaned_logistics_data.csv"
 
 GAP_FILE_ID = "12hs2Z9nrCwiTw-mSbf7goNlHIrx8Bizk"
-CLEANED_FILE_ID = "1bcxPQdjsYHtP87ezmFmwoxSjanQO8J7Z"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -51,15 +49,8 @@ st.caption(
 
 @st.cache_data(show_spinner="Downloading and loading logistics datasets...")
 def load_data():
-
-    if not CLEANED_FILE.exists():
-        result = gdown.download(
-            id=CLEANED_FILE_ID,
-            output=str(CLEANED_FILE),
-            quiet=False
-        )
-        if not result:
-            raise FileNotFoundError("Could not download cleaned logistics dataset.")
+@st.cache_data(show_spinner="Downloading and loading logistics dataset...")
+def load_data():
 
     if not DATA_FILE.exists():
         result = gdown.download(
@@ -67,19 +58,19 @@ def load_data():
             output=str(DATA_FILE),
             quiet=False
         )
+
         if not result:
-            raise FileNotFoundError("Could not download delivery gap dataset.")
+            raise FileNotFoundError(
+                "Could not download delivery gap dataset."
+            )
 
-    path = DATA_FILE if DATA_FILE.exists() else CLEANED_FILE
-
-    df = pd.read_csv(path, low_memory=False)
+    df = pd.read_csv(DATA_FILE, low_memory=False)
     df.columns = df.columns.astype(str).str.strip()
 
     if df.empty:
         raise ValueError("The logistics dataset is empty.")
 
-    return df, str(path)
-  
+    return df, str(DATA_FILE)
 def find_column(df, candidates):
     normalized = {
         str(c).strip().lower().replace("_", " ").replace("-", " "): c
