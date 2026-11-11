@@ -1386,7 +1386,7 @@ st.caption(
     f"Eligible shipments: {len(eligible):,}"
 )
 
-Worked for 11s
+
 I reviewed your complete app.py. I found several memory-heavy operations that can contribute to Render's 512 MB limit.
 
 The main issue is unnecessary copies of the 59.5 MB dataset. Your code currently:
@@ -1447,103 +1447,6 @@ for col in df.select_dtypes(include=["int64"]).columns:
 
 for col in df.select_dtypes(include=["float64"]).columns:
     df[col] = pd.to_numeric(df[col], downcast="float")
-
-This retains all dataset columns while reducing memory where possible.
-
-Important: Make only these changes first, commit them to GitHub, and let Render redeploy. Then check whether the service stays healthy.
-
-I have not changed your KPI formulas, dashboard modules, filters, or analytical logic.
-
-ek hi baar me de de shi code pura hi replace krke entirely
-
-Worked for 11s
-
-I've prepared the complete replacement app.py, with memory optimizations and your existing dashboard modules, KPIs, filters, charts, and download reports retained.
-
-Python syntax check passed
-Download the complete optimized app.py
-
-Replace your existing file
-Download the file above.
-
-Open your GitHub repository.
-
-Open the existing app.py.
-
-Click the pencil (Edit) icon.
-
-Select all existing code and delete it.
-
-Open the downloaded file, copy all its code, and paste it into GitHub's editor.
-
-Click Commit changes.
-
-Render will automatically redeploy.
-
-Important: Keep your existing requirements.txt with gdown, streamlit, pandas, numpy, and plotly installed. Don't delete your Google Drive dataset.
-
-After deployment, check whether Render stays healthy and the dashboard opens.
-
-
-app.py
-Code
-
-Context window full
-Start a new chat with an automatic summary of this conversation, or upgrade to continue here with more context available in every chat.
-
-kuch change to nhi kiya jisse kuch probklem na aaye
-
-    st.caption(
-        "Regional and country heatmaps use categorical performance data. "
-        "They do not represent coordinate-based destination maps. "
-        "Customer coordinates are not treated as destination coordinates."
-    )
-    download_csv(
-        region_performance, "regional_dashboard_performance.csv",
-        "Download Regional Performance"
-    )
-    download_csv(
-        country_performance, "country_dashboard_performance.csv",
-        "Download Country Performance"
-    )
-    download_csv(
-        market_performance, "market_dashboard_performance.csv",
-        "Download Market Performance"
-    )
-
-
-# ============================================================
-# GLOBAL REPORT DOWNLOADS
-# ============================================================
-
-st.sidebar.divider()
-st.sidebar.header("Download Analytical Reports")
-
-kpi_download = pd.DataFrame([
-    {"KPI": key, "Value": value} for key, value in kpis.items()
-])
-
-download_csv(
-    filtered_data, "complete_filtered_dashboard_data.csv",
-    "Download Filtered Dataset"
-)
-download_csv(
-    kpi_download, "five_required_dashboard_kpis.csv",
-    "Download Five KPI Results"
-)
-download_csv(
-    mode_performance, "dashboard_shipping_mode_report.csv",
-    "Download Shipping Mode Report"
-)
-download_csv(
-    region_performance, "dashboard_regional_report.csv",
-    "Download Regional Report"
-)
-download_csv(
-    market_performance, "dashboard_market_report.csv",
-    "Download Market Report"
-)
-
 
 # ============================================================
 # DEFINITIONS AND LIMITATIONS
