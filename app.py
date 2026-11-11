@@ -1386,68 +1386,6 @@ st.caption(
     f"Eligible shipments: {len(eligible):,}"
 )
 
-
-I reviewed your complete app.py. I found several memory-heavy operations that can contribute to Render's 512 MB limit.
-
-The main issue is unnecessary copies of the 59.5 MB dataset. Your code currently:
-
-Loads and caches the full CSV.
-
-Copies the complete dataset in prepare_data().
-
-Copies it again in filtered_data = data.copy().
-
-Creates additional copies for eligible shipments and risk analysis.
-
-Generates large CSV strings for download buttons.
-
-We can reduce memory usage without removing your four analytical modules, KPIs, filters, charts, or reports.
-
-Step 1 — Make these two changes first
-Change 1: Inside prepare_data()
-
-Find:
-
-def prepare_data(source):
-    df = source.copy()
-
-Replace with:
-
-def prepare_data(source):
-    df = source
-
-Change 2: Inside GLOBAL FILTERS
-
-Find:
-
-filtered_data = data.copy()
-
-Replace with:
-
-filtered_data = data
-
-These changes eliminate two unnecessary full-dataset copies.
-
-Step 2 — Optimize the dataset memory
-Inside load_data(), immediately after:
-
-df.columns = df.columns.astype(str).str.strip()
-
-Add:
-
-# Reduce memory usage without removing dataset columns
-for col in df.select_dtypes(include=["object"]).columns:
-    unique_ratio = df[col].nunique(dropna=False) / max(len(df), 1)
-
-    if unique_ratio <= 0.05:
-        df[col] = df[col].astype("category")
-
-for col in df.select_dtypes(include=["int64"]).columns:
-    df[col] = pd.to_numeric(df[col], downcast="integer")
-
-for col in df.select_dtypes(include=["float64"]).columns:
-    df[col] = pd.to_numeric(df[col], downcast="float")
-
 # ============================================================
 # DEFINITIONS AND LIMITATIONS
 # ============================================================
